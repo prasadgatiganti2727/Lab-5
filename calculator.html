@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator - Extra Credit</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+<div class="box">
+    <h2>Tip Calculator</h2>
+    <p><strong>Currency conversion:</strong><br>
+        $1 USD = €0.95 EUR for EUROS<br>
+        $1 USD = ₹85 INR for Rupees</p>
+
+    <label for="bill2">Bill Total: $</label>
+    <input type="text" id="bill2" />
+    <div id="error" class="error-message"></div>
+
+    <label for="withTax2">Total Bill with Tax (11%):</label>
+    <input type="text" id="withTax2" disabled />
+
+    <label for="currency">Select Currency:</label>
+    <select id="currency">
+        <option value="USD">US Dollars ($)</option>
+        <option value="EUR">Euros (€)</option>
+        <option value="INR">Rupees (₹)</option>
+    </select>
+
+    <label for="tipSlider2">Tip:</label>
+    <div class="tip-group">
+        <input type="range" id="tipSlider2" min="0" max="100" value="0" />
+        <div class="tip-value" id="tipDisplay2">0%</div>
+    </div>
+
+    <label for="convertedTip">Converted Tip Amount:</label>
+    <input type="text" id="convertedTip" disabled />
+
+    <label for="convertedTotal">Converted Total Bill with Tip and Tax:</label>
+    <input type="text" id="convertedTotal" disabled />
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

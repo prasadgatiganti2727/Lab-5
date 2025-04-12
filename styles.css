@@ -1,0 +1,71 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  background-image:url("image1.jpg");
+  background-size:cover;
+  background-repeat:no-repeat;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  overflow: hidden;
+}
+
+.box {
+  background-color: #c0c0c0;
+  padding: 20px;
+  margin: 5px;
+  width: 600px;
+  border: 1px solid #888;
+  background: rgba(59, 88, 197, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+input[disabled] {
+  background: rgba(211, 208, 207, 0.2);
+}
+
+.tip-group {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.tip-group input[type=range] {
+  flex: 1;
+}
+
+.tip-value {
+  background: rgba(67, 64, 64, 0.99);
+  color: white;
+  padding: 5px 10px;
+  margin-left: 10px;
+  border-radius: 4px;
+}
+.error-message {
+  color: red;
+  font-size: 0.9em;
+}
+
+
