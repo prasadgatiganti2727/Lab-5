@@ -1,29 +1,92 @@
+/* --- Base layout setup for the full screen --- */
+/* Using flex to center everything on the page with a nice background image */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #fff;
-  background-image:url("image1.jpg");
-  background-size:cover;
-  background-repeat:no-repeat;
+  font-family: 'Fredericka the Great', sans-serif;
+  background-image: url("image1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
-  padding: 30px;
+  align-items: center;
+  padding: 25px;
+  height: 100vh;
   overflow: hidden;
+  margin-top: -20px;
 }
 
+/* --- Main content box styling --- */
+/* Semi-transparent card-style container with smooth edges and soft border */
 .box {
-  background-color: #c0c0c0;
+  background: rgba(59, 88, 197, 0.2);
   padding: 20px;
   margin: 5px;
   width: 600px;
-  border: 1px solid #888;
-  background: rgba(59, 88, 197, 0.2);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.6);
 }
 
+/* --- Input styling --- */
+/* Making text fields and dropdowns look clean and modern */
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 12px 15px;
+  margin-top: 10px;
+  box-sizing: border-box;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 1em;
+  font-family: 'Manrope', sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+/* --- Input focus & hover interactions --- */
+/* Gives a subtle glow and background change when users interact */
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+  border-color: #3b58c5;
+  outline: none;
+  box-shadow: 0 0 10px rgba(59, 88, 197, 0.5);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+input[type="text"]:hover,
+input[type="number"]:hover,
+select:hover {
+  border-color: #3b58c5;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* --- Placeholder tweaks --- */
+/* Slightly fancy placeholder styles with focus transitions */
+input[type="text"]::placeholder,
+input[type="number"]::placeholder,
+select::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  font-style: italic;
+  transition: color 0.3s ease-in-out;
+}
+
+input[type="text"]:focus::placeholder,
+input[type="number"]:focus::placeholder,
+select:focus::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* --- Subtle input background animation --- */
+input[type="text"],
+input[type="number"],
+select {
+  background: linear-gradient(145deg, rgba(59, 88, 197, 0.4), rgba(67, 64, 64, 0.2));
+  transition: background-color 0.5s ease-in-out;
+}
+
+/* --- Labels, headings, and layout tweaks --- */
 h2 {
   margin-bottom: 10px;
 }
@@ -31,8 +94,10 @@ h2 {
 label {
   display: block;
   margin-top: 10px;
+  font-family: 'Manrope', sans-serif;
 }
 
+/* These were repeated but kept for layout consistency */
 input[type="text"],
 input[type="number"],
 select {
@@ -42,10 +107,15 @@ select {
   box-sizing: border-box;
 }
 
+/* --- Disabled field style --- */
+/* Light greyed-out look for non-editable fields */
 input[disabled] {
-  background: rgba(211, 208, 207, 0.2);
+  background: rgba(211, 208, 207, 0.5);
+  color: rgba(67, 64, 64, 0.99);
 }
 
+/* --- Tip range slider section --- */
+/* Flex layout for range input and displaying value next to it */
 .tip-group {
   display: flex;
   align-items: center;
@@ -63,9 +133,26 @@ input[disabled] {
   margin-left: 10px;
   border-radius: 4px;
 }
+
+/* --- Error message display --- */
 .error-message {
   color: red;
   font-size: 0.9em;
 }
 
+/* --- Button group styling --- */
+/* Spaced out buttons with soft rounded corners */
+.btn-group {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
 
+button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: #3b58c5;
+  color: white;
+  cursor: pointer;
+}
